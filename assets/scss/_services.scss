@@ -1,0 +1,283 @@
+// Services section
+.services-section {
+  margin-top: $margin-10xl;
+  width: $width-32xl;
+  max-width: 100%;
+  padding-bottom: 19px;
+
+  @include mobile {
+    margin-top: $gap-7xl;
+  }
+}
+
+.services-container {
+  @include flex-column-stretch;
+  width: 100%;
+  justify-content: start;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.services-grid {
+  @include flex-column;
+  gap: $gap-2xl;
+}
+
+.services-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: $gap-7xl $gap-9xl;
+  justify-content: start;
+  flex-wrap: wrap;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.service-card {
+  @include service-card-base;
+
+  &.aluminum-windows {
+    background-color: $aluminum-bg;
+    min-width: $width-12xl;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: $width-14xl;
+
+    @include mobile {
+        width: 100%;
+    }
+
+    .service-content {
+      @include flex-column;
+      padding-left: $spacing-lg;
+
+      @include mobile {
+        padding-left: $spacing-lg;
+      }
+    }
+
+    .service-title {
+      align-self: start;
+      z-index: $z-index-overlay;
+    }
+
+    .service-image {
+      @include aspect-ratio($aspect-aluminum-service);
+      width: $width-10xl;
+      align-self: end;
+      margin-top: -29px;
+      max-width: 100%;
+
+    }
+  }
+
+  &.plastic-windows {
+    background-color: $plastic-bg;
+    min-width: $width-12xl;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: $width-26xl;
+    padding: $padding-sm 0 $padding-sm $padding-3xl;
+
+    @include mobile {
+      max-width: $max-width-full;
+      padding-left: $spacing-lg;
+    }
+  }
+
+  &.balconies {
+    background-color: $balconies-bg;
+    min-width: $width-12xl;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: $width-23xl;
+    padding: $margin-3xl 9px 0 25px;
+
+    @include mobile {
+      max-width: $max-width-full;
+      padding-left: $spacing-lg;
+    }
+
+    .service-image {
+      @include aspect-ratio($aspect-balconies-service);
+
+      @include mobile {
+        margin-top: $gap-7xl;
+      }
+    }
+  }
+
+  &.stained-glass {
+    background-color: $stained-glass-bg;
+    min-width: $width-12xl;
+    flex-grow: 1;
+    flex-shrink: 1;
+    width: $width-23xl;
+    padding: $margin-3xl 9px 0 26px;
+
+    @include mobile {
+      max-width: $max-width-full;
+      padding-left: $spacing-lg;
+    }
+
+/*     .service-title {
+        font-weight: $font-semibold;
+        line-height: $line-height-tight;
+        font-size: $font-4xl;
+        font-family: $font-alternates;
+    } */
+
+    .service-image {
+      @include aspect-ratio($aspect-stained-glass-service);
+      background-blend-mode: darken;
+
+      @include mobile {
+        margin-top: $gap-7xl;
+      }
+    }
+  }
+
+  &.mosquito-nets {
+    background-color: $mosquito-nets-bg;
+    min-width: $width-12xl;
+    overflow: hidden;
+    width: $width-27xl;
+    padding: $padding-xs 0 $padding-xs $padding-5xl;
+
+    @include mobile {
+      max-width: $max-width-full;
+      padding-left: $spacing-lg;
+    }
+
+    .service-text {
+      z-index: $z-index-overlay;
+      font-family: $font-alternates;
+      margin: 33px -178px 0 0;
+      width: 44%;
+
+      @include mobile {
+        margin-top: 37px;
+      }
+    }
+
+/*     .service-title {
+      color: $primary-color;
+      font-size: $font-4xl;
+      font-weight: $font-semibold;
+      line-height: $line-height-tight;
+    } */
+
+    .service-image {
+      @include aspect-ratio($aspect-mosquito-service);
+
+      @include mobile {
+        max-width: $max-width-full;
+        margin-top: 4px;
+      }
+    }
+  }
+
+  &.plisse-nets {
+    background-color: $plisse-nets-bg;
+    min-width: $width-12xl;
+    overflow: hidden;
+    color: $plisse-text;
+    width: $width-20xl;
+    
+    @include mobile {
+        width: 100%;
+    }
+
+    .service-content {
+      @include flex-column;
+        padding-left: $spacing-lg;
+
+      @include mobile {
+        padding-left: $spacing-lg;
+      }
+    }
+
+    .service-image {
+      @include aspect-ratio($aspect-plisse-service);
+      width: $width-15xl;
+      align-self: end;
+      margin-top: 5px;
+      max-width: 100%;
+    }
+  }
+}
+
+.service-content-row {
+  gap: $spacing-lg;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+
+.service-text {
+  @include flex-column-stretch;
+  line-height: normal;
+  width: 37%;
+  margin-left: 0px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.service-title {
+  color: $primary-color;
+  margin-top: $margin-3xl;
+  font-weight: $font-semibold;
+  font-size: $font-4xl;
+  line-height: $line-height-service;
+  font-family: $font-alternates;
+
+  @include mobile {
+    margin-top: $gap-7xl;
+  }
+}
+
+.service-subtitle {
+  color: rgba(144, 123, 102, 1);
+  font-size: $font-2xl;
+  font-weight: $font-medium;
+  line-height: $line-height-service;
+  margin-top: $spacing-xs;
+}
+
+.service-image-wrapper {
+  @include flex-column-stretch;
+  line-height: normal;
+  width: 63%;
+  margin-left: $spacing-lg;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-height: 100%;
+
+/*   @include mobile {
+    width: 100%;
+  } */
+}
+
+.service-image {
+    
+  @include aspect-ratio($aspect-plastic-service);
+  width: 100%;
+  flex-grow: 1;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: 35px;
+  }
+}

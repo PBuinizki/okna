@@ -1,0 +1,199 @@
+// Footer
+.footer {
+  align-self: stretch;
+  display: flex;
+  margin-top: $margin-10xl;
+  width: 100%;
+  padding-top: 7px;
+  flex-direction: column;
+  align-items: stretch;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+  }
+}
+
+.footer-nav {
+  align-self: center;
+  display: flex;
+  width: 100%;
+  max-width: $width-30xl;
+  align-items: center;
+  gap: $gap-7xl $gap-8xl;
+  color: $secondary-color;
+  text-align: center;
+  text-transform: uppercase;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font: $font-medium $font-base/$line-height-relaxed $font-primary;
+
+  @include mobile {
+    max-width: $max-width-full;
+    flex-direction: column;
+  }
+}
+
+.footer-link {
+  text-decoration: none;
+  color: inherit;
+  transition: color $transition-fast;
+  padding: $spacing-xs;
+  border-radius: $spacing-xs/2;
+
+  &:hover,
+  &:focus {
+    color: rgba(26, 43, 80, 1);
+  }
+
+  &:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+.footer-info {
+  background-color: $background-footer;
+  display: flex;
+  margin-top: $font-xs;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: $spacing-lg $padding-10xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.footer-content {
+  @include flex-between;
+  width: 100%;
+  max-width: $width-33xl;
+  gap: $gap-7xl $gap-10xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.footer-logo {
+  color: rgba(22, 27, 8, 1);
+  text-shadow: $shadow-text;
+  letter-spacing: 3.64px;
+  align-self: stretch;
+  flex-grow: 1;
+  line-height: $line-height-hero;
+  font-size: $font-5xl;
+  font-family: $font-philosopher;
+  -webkit-text-stroke: 1px #FCF6B8;
+  padding: $spacing-lg;
+
+  @include mobile {
+    max-width: $max-width-full;
+    font-size: $gap-7xl;
+    line-height: 44px;
+  }
+}
+
+.social-links {
+  align-self: stretch;
+  display: flex;
+  align-items: stretch;
+  gap: $gap-lg;
+  color: $white;
+  white-space: nowrap;
+  text-align: center;
+  margin: auto 0;
+  font: $font-regular $font-xl/$line-height-tight 'Font Awesome 5 Brands', -apple-system, Roboto, Helvetica, sans-serif;
+
+  @include mobile {
+    white-space: initial;
+  }
+}
+
+.social-link {
+  @include social-link-base;
+
+  @include mobile {
+    white-space: initial;
+  }
+
+  &.facebook {
+    background-color: rgba(38, 38, 38, 1);
+  }
+
+  &.whatsapp {
+    background-color: rgba(37, 211, 102, 1);
+  }
+
+  &.telegram {
+    background-color: rgba(44, 165, 224, 1);
+    padding: 0 10px;
+  }
+
+  svg {
+    width: $spacing-lg;
+    height: $spacing-lg;
+    fill: currentColor;
+  }
+}
+
+.footer-contact {
+  align-self: stretch;
+  @include flex-column-stretch;
+  font-family: $font-primary;
+  line-height: $line-height-normal;
+  margin: auto 0;
+}
+
+.footer-phone {
+  color: $secondary-color;
+  font-size: $font-lg;
+  font-weight: $font-bold;
+  text-align: right;
+  text-decoration: none;
+  transition: color $transition-fast;
+
+  &:hover,
+  &:focus {
+    color: rgba(26, 43, 80, 1);
+  }
+
+  &:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+.footer-hours {
+  color: $text-muted;
+  font-size: $font-xs;
+  font-weight: $font-medium;
+  text-align: center;
+  align-self: end;
+  margin-top: $gap-lg;
+}
+
+.footer-bottom {
+  background-color: $background-footer-bottom;
+  z-index: $z-index-overlay;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: start;
+  color: $white;
+  justify-content: center;
+  padding: 14px $padding-10xl;
+  font: $font-medium $font-sm/$line-height-normal $font-primary;
+
+  @include mobile {
+    max-width: $max-width-full;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.copyright {
+  margin: 0;
+}

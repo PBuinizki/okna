@@ -1,0 +1,191 @@
+// Testimonials section
+.testimonials-section {
+  background-color: $background-testimonials;
+  display: flex;
+  margin-top: $margin-10xl;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: $padding-6xl $padding-6xl $padding-xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.testimonials-container {
+  @include flex-column-center;
+  width: 100%;
+  max-width: $width-34xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.testimonials-slider {
+  width: 100%;
+  margin-bottom: 75px!important;
+
+  @include mobile {
+    margin-top: $gap-7xl;
+  }
+
+  .slick-dots {
+    bottom: -50px;
+
+    li button:before {
+      color: $accent-color;
+      font-size: 12px;
+    }
+
+    li.slick-active button:before {
+      color: $primary-color;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    width: $width-sm;
+    height: $width-sm;
+
+    &:before {
+      display: none;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+  }
+
+  .slick-prev {
+    left: -60px;
+
+    &:after {
+      border-width: 8px 12px 8px 0;
+      border-color: transparent $accent-color transparent transparent;
+    }
+  }
+
+  .slick-next {
+    right: -60px;
+
+    &:after {
+      border-width: 8px 0 8px 12px;
+      border-color: transparent transparent transparent $accent-color;
+    }
+  }
+}
+
+.testimonials-wrapper {
+  align-self: stretch;
+  display: flex;
+  margin-top: $margin-8xl;
+  width: 100%;
+  align-items: center;
+  gap: $gap-sm;
+  flex-wrap: wrap;
+  margin-bottom: 53px;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+  }
+}
+
+.testimonial-nav {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform $transition-fast;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  &:focus {
+    outline: 2px solid $accent-color;
+    outline-offset: 2px;
+  }
+
+  img {
+    aspect-ratio: 1;
+    object-fit: contain;
+    object-position: center;
+    width: $width-sm;
+    align-self: stretch;
+    flex-shrink: 0;
+    margin: auto 0;
+  }
+}
+
+.testimonials-grid {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  gap: $gap-6xl;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  @include testimonial-card-base;
+
+  @include mobile {
+    padding: 0 $spacing-lg;
+  }
+}
+
+.testimonial-author {
+  color: $primary-color;
+  font: $font-extrabold $font-xl/$line-height-normal $font-alternates;
+}
+
+.testimonial-service {
+  color: $text-muted;
+  margin-top: $font-xs;
+  font: $font-medium $font-sm/$line-height-normal $font-primary;
+}
+
+.testimonial-rating {
+  display: flex;
+  margin-top: $font-lg;
+  align-items: start;
+  gap: $gap-md;
+  overflow: hidden;
+  justify-content: start;
+  padding: $padding-xs;
+}
+
+.star {
+  @include aspect-ratio(1.04);
+  object-fit: contain;
+  object-position: center;
+  width: 23px;
+  flex-shrink: 0;
+
+  &:nth-child(2),
+  &:nth-child(5) {
+    aspect-ratio: 1.09;
+    width: 24px;
+  }
+}
+
+.testimonial-text {
+  color: $text-muted;
+  align-self: stretch;
+  margin-top: $margin-2xl;
+  font: $font-medium $font-sm/$line-height-loose $font-primary;
+}

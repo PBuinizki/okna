@@ -1,0 +1,64 @@
+// Features section
+.features-section {
+  margin-top: $margin-10xl;
+  width: 100%;
+  color: $primary-color;
+  text-align: center;
+  font: $font-medium $font-lg $font-primary;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+  }
+}
+
+.features-container {
+  z-index: $z-index-overlay;
+  display: flex;
+  min-height: $height-xl;
+  width: 100%;
+  align-items: start;
+  gap: $gap-7xl $gap-11xl;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -56px 0 -20px;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-bottom: 10px;
+  }
+}
+
+.feature-item {
+  @include flex-column-center;
+  min-width: $width-12xl;
+  justify-content: center;
+  width: $width-13xl;
+}
+
+.feature-icon {
+  width: $width-xl;
+  height: $width-xl;
+  object-fit: contain;
+  object-position: center;
+
+  &:nth-child(1) {
+    aspect-ratio: 1;
+  }
+
+  &:nth-child(2) {
+    aspect-ratio: 1.24;
+    width: $width-2xl;
+  }
+
+  &:nth-child(3) {
+    aspect-ratio: 1;
+    border-radius: $border-radius-full;
+  }
+}
+
+.feature-title {
+  margin-top: $spacing-md;
+  font-weight: $font-medium;
+  font-size: $font-lg;
+}

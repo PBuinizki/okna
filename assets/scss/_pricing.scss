@@ -1,0 +1,110 @@
+// Pricing section
+.pricing-section {
+  background-color: $background-light;
+  align-self: stretch;
+  display: flex;
+  margin-top: $margin-10xl;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: $margin-11xl $padding-6xl $padding-7xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.pricing-container {
+  @include flex-column-center;
+  width: 100%;
+  max-width: $width-28xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.section-title {
+  @include section-title;
+}
+
+.pricing-grid {
+  align-self: stretch;
+  gap: $spacing-lg;
+  display: flex;
+  margin-bottom: $margin-6xl;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+
+.pricing-card {
+  @include flex-column-stretch;
+  line-height: normal;
+  width: 33%;
+  margin-left: 0px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.pricing-content {
+  @include pricing-card-base;
+
+  @include mobile {
+    margin-top: 30px;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.pricing-title {
+  color: $primary-color;
+  font: $font-extrabold $font-xl $font-alternates;
+}
+
+.pricing-specs {
+  color: $text-muted;
+  font-size: $font-sm;
+  align-self: center;
+  margin-top: $spacing-md;
+}
+
+.pricing-price {
+  color: $accent-color;
+  font-size: $font-3xl;
+  align-self: center;
+  margin-top: $margin-lg;
+}
+
+.price-amount {
+  font-weight: $font-bold;
+}
+
+.pricing-image {
+  @include aspect-ratio($aspect-pricing-1);
+  width: $width-11xl;
+  margin: $margin-xl 22px 0 23px;
+  align-self: center;
+
+  @include mobile {
+    margin: 0 10px;
+  }
+
+  .pricing-card:nth-child(2) & {
+    @include aspect-ratio($aspect-pricing-2);
+    width: 100%;
+    margin: $margin-xl 0 0 0;
+  }
+
+  .pricing-card:nth-child(3) & {
+    @include aspect-ratio($aspect-pricing-3);
+    width: 100%;
+    margin: $margin-xl 0 0 0;
+  }
+}

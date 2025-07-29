@@ -1,0 +1,126 @@
+// Gallery section
+.gallery-section {
+  display: flex;
+  margin-top: $margin-10xl;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding: $width-xl 78px;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.gallery-container {
+  align-self: stretch;
+  display: flex;
+  margin-top: $margin-14xl;
+/*   height: $height-3xl; */
+  width: 100%;
+  align-items: center;
+  gap: $padding-xl;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: $margin-13xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+  }
+}
+
+.gallery-slider {
+  width: 100%;
+  height: auto !important; 
+
+  .slick-dots {
+    bottom: -50px;
+
+    li button:before {
+      color: $accent-color;
+      font-size: 12px;
+    }
+
+    li.slick-active button:before {
+      color: $primary-color;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+
+    &:before {
+      color: $accent-color;
+      font-size: 20px;
+    }
+  }
+
+  .slick-prev {
+    left: 10px;
+  }
+
+  .slick-next {
+    right: 10px;
+  }
+}
+
+.gallery-slide {
+  padding: 0 10px;
+}
+
+.gallery-grid {
+  align-self: stretch;
+  display: flex;
+  min-width: $width-12xl;
+  align-items: start;
+  gap: $gap-4xl $spacing-lg;
+  justify-content: start;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: $width-25xl;
+  margin: auto 0;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.gallery-image {
+/*   @include aspect-ratio($aspect-gallery); */
+/*   max-height: 360px; /* Установи желаемый размер здесь */
+  height: 100%;
+  aspect-ratio: 1/1.5;
+  object-fit: cover;
+/*   width: $width-12xl; */
+  min-width: $width-12xl;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-radius: $border-radius-md;
+  @include image-hover;
+
+  &.tall {
+/*     @include aspect-ratio($aspect-gallery-tall);
+    width: $width-18xl;
+    height: auto;*/
+  } 
+}
+
+.gallery-tall {
+  align-self: stretch;
+  display: flex;
+  min-width: $width-12xl;
+  align-items: center;
+  gap: $gap-2xl;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin: auto 0;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}

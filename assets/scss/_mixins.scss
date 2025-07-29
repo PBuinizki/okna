@@ -1,0 +1,199 @@
+// Responsive breakpoint mixin
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+
+// Flexbox mixins
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-column-center {
+  @include flex-column;
+  align-items: center;
+}
+
+@mixin flex-column-stretch {
+  @include flex-column;
+  align-items: stretch;
+}
+
+// Button mixin
+@mixin button-base {
+  border-radius: $border-radius-lg;
+  display: flex;
+  align-items: center;
+  gap: $gap-md;
+  font-size: $font-lg;
+  font-weight: $font-semibold;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: $line-height-tight;
+  justify-content: center;
+  padding: $spacing-md $spacing-xl;
+  border: 2px solid $text-dark;
+  background: transparent;
+  color: $text-dark;
+  cursor: pointer;
+  transition: all $transition-fast;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $text-dark;
+    color: $white;
+  }
+}
+
+// Card hover effect
+@mixin card-hover {
+  transition: transform $transition-fast, box-shadow $transition-fast;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $shadow-light;
+  }
+}
+
+// Image hover effect
+@mixin image-hover {
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Section title
+@mixin section-title {
+  color: $primary-color;
+  text-align: center;
+  font: $font-extrabold $font-3xl/$line-height-normal $font-alternates;
+  margin-bottom: $margin-9xl;
+}
+
+// Service card base
+@mixin service-card-base {
+  position: relative;
+  overflow: hidden;
+  color: $primary-color;
+  height: 350px;
+  border-radius: $border-radius-md;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+// Pricing card base
+@mixin pricing-card-base {
+  background-color: $white;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: stretch;
+  font-family: $font-primary;
+  font-weight: $font-medium;
+  text-align: center;
+  line-height: $line-height-normal;
+  width: 100%;
+  padding: $padding-8xl $padding-4xl;
+  border-radius: $border-radius-md;
+  @include card-hover;
+}
+
+// Testimonial card base
+@mixin testimonial-card-base {
+    margin-right: 1em;
+  background-color: $white;
+  align-self: stretch;
+  display: flex;
+  min-width: $width-12xl;
+  flex-direction: column;
+  align-items: start;
+  width: $width-20xl;
+  padding: $padding-9xl $padding-2xl;
+  border-radius: $border-radius-md;
+  @include card-hover;
+}
+
+// Screen reader only
+@mixin sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+// Icon base
+@mixin icon-base {
+  width: $spacing-lg;
+  height: $spacing-lg;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+// Social link base
+@mixin social-link-base {
+  border-radius: $border-radius-xl;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $width-xs;
+  justify-content: center;
+  height: $height-xs;
+  padding: 0 $margin-xs;
+  text-decoration: none;
+  transition: transform $transition-fast;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// Container max width
+@mixin container {
+  width: 100%;
+  max-width: $width-30xl;
+  margin: 0 auto;
+  padding: 0 $spacing-lg;
+
+  @include mobile {
+    max-width: $max-width-full;
+    padding: 0 $spacing-lg;
+  }
+}
+
+// Grid base
+@mixin grid-base($gap: $gap-xl) {
+  display: flex;
+  gap: $gap;
+  flex-wrap: wrap;
+}
+
+// Aspect ratio
+@mixin aspect-ratio($ratio) {
+  aspect-ratio: $ratio;
+  object-fit: contain;
+  object-position: center;
+}

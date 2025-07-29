@@ -1,0 +1,117 @@
+// Materials section
+.materials-section {
+  background-color: $background-light;
+  display: flex;
+  margin-top: $margin-10xl;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: $margin-12xl $padding-6xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+    padding: 0 $spacing-lg;
+  }
+}
+
+.materials-container {
+  @include flex-column-center;
+  width: 100%;
+  max-width: $width-29xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.materials-grid {
+  align-self: stretch;
+  display: flex;
+  margin-top: 55px;
+  min-height: $height-2xl;
+  align-items: start;
+  gap: $gap-4xl $spacing-lg;
+  justify-content: start;
+  flex-wrap: wrap;
+  margin-bottom: $margin-5xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+  }
+}
+
+.material-image {
+  min-width: $width-12xl;
+  flex-grow: 1;
+  flex-shrink: 1;
+  border-radius: $border-radius-md;
+  @include image-hover;
+
+  &:first-child {
+    @include aspect-ratio($aspect-material-1);
+    width: $width-22xl;
+
+    @include mobile {
+      max-width: $max-width-full;
+    }
+  }
+
+  &:nth-child(2),
+  &:nth-child(3) {
+    @include aspect-ratio($aspect-material-2);
+    width: $width-12xl;
+  }
+}
+
+.manufacturers-title {
+  color: $primary-color;
+  text-align: center;
+  font: $font-extrabold $font-3xl/$line-height-normal $font-alternates;
+  margin-bottom: $margin-10xl;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+  }
+}
+
+.manufacturers-grid {
+  display: flex;
+  align-items: center;
+  gap: $gap-3xl;
+  justify-content: start;
+  flex-wrap: wrap;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+    justify-content: center;
+  }
+}
+
+.manufacturer-logo {
+  @include aspect-ratio($aspect-manufacturer);
+  object-fit: contain;
+  object-position: center;
+  width: $width-12xl;
+  border-radius: $border-radius-sm;
+  align-self: stretch;
+  margin: auto 0;
+  @include image-hover;
+}
+
+.decorative-image {
+  @include aspect-ratio($aspect-decorative);
+  object-fit: contain;
+  object-position: center;
+  width: $width-30xl;
+  margin-top: $margin-10xl;
+  max-width: 100%;
+
+  @include mobile {
+    margin-top: $gap-7xl;
+  }
+}

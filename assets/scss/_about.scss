@@ -1,0 +1,102 @@
+// About section
+.about-section {
+  display: flex;
+  margin-top: $margin-10xl * 2;
+  width: $width-35xl;
+  max-width: 100%;
+  padding-right: 67px;
+  flex-direction: column;
+  align-items: stretch;
+
+  @include mobile {
+    padding-right: $spacing-lg;
+    margin-top: $gap-7xl;
+  }
+  & .cta-button {
+    max-width: fit-content;
+  }
+}
+
+.about-container {
+  z-index: $z-index-overlay;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.about-content {
+  gap: $spacing-lg;
+  display: flex;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0px;
+  }
+}
+
+.about-image {
+  @include flex-column-stretch;
+  line-height: normal;
+  width: 40%;
+  margin-left: 0px;
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.about-img {
+  width: 100%;
+  flex-grow: 1;
+
+  @include mobile {
+    max-width: $max-width-full;
+  }
+}
+
+.about-text {
+  @include flex-column-stretch;
+  line-height: normal;
+  width: 60%;
+  margin-left: $spacing-lg;
+
+  @include mobile {
+    width: 100%;
+  }
+
+  > div {
+    display: flex;
+    margin-top: 245px;
+    flex-direction: column;
+    align-items: stretch;
+
+    @include mobile {
+      max-width: $max-width-full;
+      margin-top: $gap-7xl;
+    }
+  }
+}
+
+.about-title {
+  color: $primary-color;
+  align-self: start;
+  font: $font-extrabold $font-3xl/$line-height-normal $font-alternates;
+  margin-bottom: $margin-7xl;
+}
+
+.about-description {
+  color: $black;
+  font: $font-medium $font-lg/$line-height-extra-loose $font-primary;
+
+  @include mobile {
+    max-width: $max-width-full;
+    margin-top: $gap-7xl;
+  }
+}
+
+.about-bottom {
+    display: flex;
+    justify-content: center;
+}
