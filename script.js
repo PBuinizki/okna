@@ -198,11 +198,7 @@ $(document).ready(function() {
                                 <input type="tel" id="contact-phone" name="phone" required aria-required="true">
                                 <span class="error-message" role="alert"></span>
                             </div>
-                            <div class="form-group">
-                                <label for="contact-email">Email</label>
-                                <input type="email" id="contact-email" name="email">
-                                <span class="error-message" role="alert"></span>
-                            </div>
+                            
                             <div class="form-group">
                                 <label for="contact-message">Сообщение</label>
                                 <textarea id="contact-message" name="message" rows="4"></textarea>
@@ -216,6 +212,12 @@ $(document).ready(function() {
                 </div>
             </div>
         `);
+
+       /*  <div class="form-group">
+                                <label for="contact-email">Email</label>
+                                <input type="email" id="contact-email" name="email">
+                                <span class="error-message" role="alert"></span>
+                            </div> */
 
         $('body').append(modal);
         modal.fadeIn(300);
@@ -288,10 +290,10 @@ $(document).ready(function() {
         }
 
         // Validate email if provided
-        if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+/*         if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
             showFieldError(form.find('#contact-email'), 'Пожалуйста, введите корректный email');
             isValid = false;
-        }
+        } */
 
         if (isValid) {
             // Simulate form submission

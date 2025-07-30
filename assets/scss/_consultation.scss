@@ -1,0 +1,24 @@
+.consultation {
+  &-section {
+    margin-top: $margin-10xl;
+    position: relative;
+  }
+  &-arrow {
+    position: absolute;
+    top: -2%;
+    @include mobile {
+      display: none;
+    }
+  }
+  &-img-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    & > img {
+      object-fit: contain;
+    }
+  }
+}
+
+

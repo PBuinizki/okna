@@ -33,7 +33,7 @@
   min-height: $height-2xl;
   align-items: start;
   gap: $gap-4xl $spacing-lg;
-  justify-content: start;
+  justify-content: center;
   flex-wrap: wrap;
   margin-bottom: $margin-5xl;
 
@@ -51,8 +51,8 @@
   @include image-hover;
 
   &:first-child {
-    @include aspect-ratio($aspect-material-1);
-    width: $width-22xl;
+    /* @include aspect-ratio($aspect-material-1); */
+    max-width: $width-22xl;
 
     @include mobile {
       max-width: $max-width-full;
